@@ -1,0 +1,93 @@
+﻿
+> destructuring-guide@0.0.0 all
+> npm run js && npm run ts
+
+
+> destructuring-guide@0.0.0 js
+> node js/arrays.mjs && node js/objects.mjs && node js/params.mjs && node js/pitfalls.mjs && tsx js/props.jsx
+
+form 1: Saçma ey göz eşkden gönlümdeki odlare su | Hâk-i pâyine yetem der ömrlerdir muttasıl
+form 2: Ârızun yâdıyla nem-nâk olsa müjgânum n’ola | kalan: 2
+form 3: Fuzûlî rind-i şeydâdır hemîşe halka rüsvâdır --> Beni cândan usandırdı cefâdan yâr usanmaz mı
+form 4: Öyle ser-mestem ki idrâk etmezem dünyâ nedür | İkinci beyit henüz eklenmedi
+form 5: Su Kasidesi - Kaside
+form 6: Fuzûlî 32
+form 7: su (varsayılan) | 16. yüzyıl
+form 8: Su Kasidesi [ 'nazimSekli', 'mahlas', 'beyitSayisi', 'vezin', 'anahtarKelimeler' ]
+form 9: Remel -> Fâilâtün Fâilâtün Fâilâtün Fâilün | temalar: su naat
+form 10: nazimSekli = Kaside
+form 11: Leylâ vü Mecnûn (Mesnevi) - Remel bahri
+form 11 (varsayılan): Beni Cândan Usandırdı (Gazel) - Remel bahri
+form 11b: Âşiyân-ı mürg-i dil zülf-i perîşânındadır / Kanda olsam ey perî gönlüm senin yanındadır
+form 12 (object): eser -> Su Kasidesi
+form 12 (object): sair -> Fuzûlî
+form 12 (object): redif -> su
+form 12 (map): Su Kasidesi = 32 beyit
+form 12 (map): Leylâ vü Mecnûn = 3096 beyit
+form 12 (map): Beni Cândan Usandırdı = 7 beyit
+pitfall 1: TypeError - Cannot destructure property 'baslik' of 'undefined' as it is undefined.
+pitfall 2: redif = null | nazimSekli = Mektup
+pitfall 3: Beng ü Bâde
+pitfall 4 (orijinal değişti): Klasik Türkçe
+pitfall 5 (nesne): Hadîkatü’s-Süedâ | Mensur-Manzum
+pitfall 5 (dizi): Hadîkatü’s-Süedâ | Mensur-Manzum
+P1 A: <section><h2>Su Kasidesi</h2>Saçma ey göz...</section>
+P1 B: <section><h2>Su Kasidesi</h2>Saçma ey göz...</section>
+P2 etiket: <section><h2>Gazel</h2>Beni cândan usandırdı</section>
+P2 prop: <section><h2>Gazel</h2>Beni cândan usandırdı</section>
+P3 string: <div>Fuzûlî</div>
+P3 number: <div>32</div>
+P3 tek element: <div><em>Remel bahri</em></div>
+P3 coklu element: <div><span>Matla</span><span>Makta</span></div>
+P3 undefined: <div></div>
+P3 null: <div></div>
+P3 false: <div></div>
+P3 fonksiyon: <div></div>
+P4 rest sonra (rest kazanır): <section id="ozel-id" data-tur="mesnevi"><h3>Leylâ vü Mecnûn</h3>İçerik</section>
+P4 rest önce (sabit id kazanır): <section id="sabit-id" data-tur="mesnevi"><h3>Leylâ vü Mecnûn</h3>İçerik</section>
+P5 props: <article><header>Fuzûlî - 16. Yüzyıl</header><p>Öyle ser-mestem ki idrâk etmezem dünyâ nedür</p><footer>Remel Bahri</footer></article>
+P5 children: <article><header>Fuzûlî - 16. Yüzyıl</header><p>Öyle ser-mestem ki idrâk etmezem dünyâ nedür</p><footer>Remel Bahri</footer></article>
+P6 eksik: <span>Vezin belirtilmedi</span>
+P6 undefined: <span>Vezin belirtilmedi</span>
+P6 null: <span></span>
+
+> destructuring-guide@0.0.0 ts
+> tsx ts/arrays.ts && tsx ts/objects.ts && tsx ts/params.ts && tsx ts/types.ts && tsx ts/props.tsx
+
+form 1 (ts): Saçma ey göz eşkden gönlümdeki odlare su | Hâk-i pâyine yetem der ömrlerdir muttasıl
+form 2 (ts): Ârızun yâdıyla nem-nâk olsa müjgânum n’ola | kalan: 2
+form 3 (ts): Fuzûlî rind-i şeydâdır hemîşe halka rüsvâdır --> Beni cândan usandırdı cefâdan yâr usanmaz mı
+form 4 (ts): Öyle ser-mestem ki idrâk etmezem dünyâ nedür | İkinci beyit henüz eklenmedi
+form 5 (ts): Su Kasidesi - Kaside
+form 6 (ts): Fuzûlî 32
+form 7 (ts): su (varsayılan)
+form 8 (ts): Su Kasidesi [ 'nazimSekli', 'mahlas', 'beyitSayisi', 'vezin', 'anahtarKelimeler' ]
+form 9 (ts): Remel -> Fâilâtün Fâilâtün Fâilâtün Fâilün | temalar: su naat
+form 10 (ts): nazimSekli = Kaside
+form 11 (ts): Leylâ vü Mecnûn (Mesnevi) - Remel bahri
+form 11 (ts varsayılan): Beni Cândan Usandırdı (Gazel) - Remel bahri
+form 11b (ts): Âşiyân-ı mürg-i dil zülf-i perîşânındadır / Kanda olsam ey perî gönlüm senin yanındadır
+form 12 (ts object): eser -> Su Kasidesi
+form 12 (ts object): sair -> Fuzûlî
+form 12 (ts object): redif -> su
+form 12 (ts map): Su Kasidesi = 32 beyit
+form 12 (ts map): Leylâ vü Mecnûn = 3096 beyit
+form 12 (ts map): Beni Cândan Usandırdı = 7 beyit
+T1: Beni Cândan Usandırdı | Beni Cândan Usandırdı
+T2: 32 Su Kasidesi | Remel Hezec
+T3: LEYLÂ VÜ MECNÛN
+T4: undefined | REDIFSIZ
+T5: Saçma ey göz eşkden gönlümdeki odlare su | Kim bu denlü dutuşan odlare kılmaz çâre su | undefined
+P1/P2 TS A: <section><h2>Su Kasidesi</h2>Saçma ey göz...</section>
+P1/P2 TS B: <section><h2>Su Kasidesi</h2>Saçma ey göz...</section>
+P3 TS string: <div>Fuzûlî</div>
+P3 TS number: <div>32</div>
+P3 TS element: <div><em>Remel bahri</em></div>
+P3 TS null/false: <div></div>
+P4 TS: <section id="ozel-id" class="gazel-kutu"><h3>Leylâ vü Mecnûn</h3>İçerik</section>
+P5 TS: <article><header>Fuzûlî</header><p>Öyle ser-mestem...</p><footer>Gazel</footer></article>
+P6 TS undefined: <span>Vezin belirtilmedi</span>
+P6 TS null: <span></span>
+P7 Manuel: <div><strong>Divan</strong>: Türkçe Divan</div>
+P7 PropsWithChildren: <div><strong>Mesnevi</strong>: Beng ü Bâde</div>
+P7 ComponentProps: <button data-eser="SU-01" type="button" disabled="">Kasideden Beyit Oku</button>
